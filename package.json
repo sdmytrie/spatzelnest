@@ -1,0 +1,31 @@
+{
+  "name": "spatzelnest",
+  "version": "1.0.0",
+  "description": "Pilotage Jeedom",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec 'electron .'",
+    "build": "electron-builder --help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sdmytrie/spatzelnest.git"
+  },
+  "author": "Serge DMYTRIENKO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdmytrie/spatzelnest/issues"
+  },
+  "homepage": "https://github.com/sdmytrie/spatzelnest#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "electron-window-state": "^5.0.3"
+  },
+  "devDependencies": {
+    "electron": "^9.0.5",
+    "nodemon": "^2.0.4"
+  }
+}

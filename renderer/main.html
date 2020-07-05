@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+    <title>Spatzel Nest - Jeedom</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">
+                      <i class="icon-home"></i>
+            </a>
+            <div class="collapse navbar-collapse">
+                      <ul class="navbar-nav mr-auto">
+                          <li class="nav-item">
+                              <a class="nav-link" 
+                                 href="#"
+                                 id="home">
+                                  <i class="fas fa-home"></i>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" 
+                                 href="#" 
+                                 id="salon" 
+                                 data-tmpl="salon" 
+                                 data-title="Salon">
+                                  Salon
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" 
+                                 href="#" 
+                                 id="sdj" 
+                                 data-tmpl="sdj" 
+                                 data-title="Salle de jeux">
+                                  Salle de jeux
+                              </a>
+                          </li>
+                      </ul>
+                      <ul class="navbar-nav navbar-right">
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'admin:logout' %}">Sign out</a>
+                          </li>
+                      </ul>
+                  </div>
+          </nav>
+    </header>
+    <div class="container-fluid" id="main">
+        <main>
+          <p id="no-items">No Items</p>
+          <div id="items"></div>
+        </main>
+    
+        <div id="modal">
+          
+        </div>
+    </div>
+
+    <script>
+      // You can also require other files to run in this process
+      const axios = require('axios').default;
+      require('./app')
+    </script>
+  </body>
+</html>
